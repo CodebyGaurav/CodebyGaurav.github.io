@@ -58,6 +58,7 @@ sr.reveal('.contact__input',{interval: 200});
 
 
 function formSubmithandler() {
+    console.log();
         alert("Submitted successfully");
 }
 

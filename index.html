@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- =====BOX ICONS===== -->
+    
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.9.0/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -419,14 +420,17 @@ encryption & decryption algorithm for projects with code optimization and also i
             <h2 class="section-title">Contact</h2>
 
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form" onsubmit="return formSubmithandler()">
-                    <input type="text" placeholder="Name" id="name" class="contact__input" required>
-                    <input type="mail" placeholder="Email" class="contact__input" required>
-                    <input type="text" placeholder="Subject" class="contact__input" required>
-                    <textarea name="" id="" cols="0" rows="10" placeholder="Enter the message"
+                <form id="my-form" action="https://formspree.io/f/mqkgrjkg" method="POST">
+                    <label>Name:</label>
+                    <input type="text" name="name" placeholder="Name" id="name" class="contact__input" required>
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                    <label>Message:</label>
+                    <textarea name="message" id="" cols="0" rows="10" placeholder="Enter the message"
                         class="contact__input"></textarea>
-                    <button type="submit" class="contact__button button" data-dismiss="alert">Submit</button>
-                </form>
+                    <button id="my-form-button" type="submit" class="contact__button button" data-dismiss="alert">Submit</button>
+                    <div class="alert alert-success" role="alert" id="my-form-status"></div>
+                  </form>
             </div>
         </section>
         <section class="contact section">
@@ -448,7 +452,7 @@ encryption & decryption algorithm for projects with code optimization and also i
             <a onclick="window.open('https://in.yahoo.com/')" style="color: white;">gauravsharma_2@yahoo.com</a>
 
         </div>
-        <a href="https://codebygaurav.github.io/" style="color: white;">Copyright &#169; 2021 codebygaurav</a>
+        <a href="https://codebygaurav.netlify.com/" style="color: white;">Copyright &#169; 2021 codebygaurav</a>
     </footer>
 
 
@@ -458,6 +462,29 @@ encryption & decryption algorithm for projects with code optimization and also i
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
 
+    <!-- Form Data Submission -->
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
 
 </html>
