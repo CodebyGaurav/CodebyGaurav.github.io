@@ -51,8 +51,8 @@
             <div class="home__data">
                 <!-- <h1 id="hero" class="home__title">Hi,<br>I'm <span class="home__title-color">Gaurav</span><br> Software Engineer
                 </h1> -->
-                <h1 id="hero" class="home__title">hi,<br>I am <span class="home__title-color">Gaurav</span><br> Software ngineer.
-                </h1>
+                <div class="hi"></div>
+                <h1 id="hero" class="home__title">hi,<br>I am <span class="home__title-color">Gaurav</span><br></h1>
                 <a onclick="window.open('./assets/resume/Gaurav Resume.pdf')" class="button">My Resume</a>
                 <br><br>
                 <a href="#contact" class="button">Contact</a>
@@ -495,24 +495,30 @@ encryption & decryption algorithm for projects with code optimization and also i
         .move(1, {delay: 400})
         .delete(1)
         .type('H',{delay: 400})
-        .move('END')  
-        .move(-8, {speed: 40, delay: 400})
-        .type('E')
+        .move('END') 
+        .pause(500)
+        .type('<span class="infoData"> Software ngineer.</span>')
+        .pause(500)
+        .move(-8)
+        .type('E',{speed: 40, delay:400})
         .move('END')
-        .move(0,{speed: 40, delay: 400})
-        .pause(1000)
+        .pause(500)
         .delete(18)
-        .type('Web Developer.')
-        .pause(1000)
+        .type('<span class="infoData">Web Developer.</span>')
+        .pause(500)
         .delete(15)
-        .type('Full Stack engineer.')
-        .pause(1000)
+        .type('<span class="infoData">Full Stack engineer.</span>')
+        .pause(500)
         .delete(9)
         .move(8, {speed: 40, delay: 400})
         .delete(9)
-        .type('Engineer.')
-        .pause(1000)
+        .type('<span class="infoData">Engineer.</span>')
+        .pause(500)
         .move('END')
+        .break({delay: 500})
+        .break({delay: 500})
+        .type('<span style="color: #00aff0"><em>- XCodeG</em></span>')
+        .pause(1000)
         .go();
         
     </script>

@@ -198,6 +198,7 @@ img{
 }
 .home__title-color{
   color: var(--first-color);
+  animation : name 3s ease-in-out infinite
 }
 .home__social{
   display: flex;
@@ -509,4 +510,55 @@ img{
 .fa-skype {
   background: #00aff0;
   color: white;
+}
+
+/* Info Data */
+.infoData{
+  color: #9d40f4;
+}
+
+/* HI */
+.hi {
+  width: 50px;
+  height: 72px;
+  background-image: url("http://s.cdpn.io/79/sprite-steps.png");
+    animation: play .8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+ from { background-position:    0px; }
+   to { background-position: -500px; }
+}
+
+@-moz-keyframes play {
+ from { background-position:    0px; }
+   to { background-position: -500px; }
+}
+
+@-ms-keyframes play {
+ from { background-position:    0px; }
+   to { background-position: -500px; }
+}
+
+@-o-keyframes play {
+ from { background-position:    0px; }
+   to { background-position: -500px; }
+}
+
+@keyframes play {
+ from { background-position:    0px; }
+   to { background-position: -500px; }
+}
+@keyframes name{
+  0% {
+    color: rgb(226, 206, 25);
+  }60%{
+    color: rgb(84, 206, 115);
+  }
+  90%{
+    color: initial;
+  }
+  100%{
+    color: rgb(5, 93, 109);
+  }
 }
