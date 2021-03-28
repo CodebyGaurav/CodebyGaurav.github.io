@@ -10,6 +10,7 @@
 :root{
   --first-color: #4070F4;
   --second-color: #0E2431;
+  background: url(http://tympanus.net/codrops-playground/assets/images/cssref/pseudo/root/sativa.png);
 }
 
 /*===== Fuente y tipografia =====*/
@@ -118,6 +119,7 @@ img{
   z-index: var(--z-fixed);
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  background: url(http://tympanus.net/codrops-playground/assets/images/cssref/pseudo/root/sativa.png);
 }
 
 /*===== NAV =====*/
@@ -223,7 +225,8 @@ img{
 /*BUTTONS*/
 .button{
   display: inline-block;
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
+  background-color: #4070f499;
   color: #fff;
   padding: .75rem 1.0rem;
   font-weight: var(--font-semi);
@@ -314,7 +317,7 @@ img{
   width: 50%;
 }
 .skills__git{
-  width: 50%;
+  width: 60%;
 }
 .skills__spring{
   width: 75%;
@@ -451,7 +454,6 @@ img{
   .home__img{
     width: 400px;
     bottom: 15%;
-    background-color: #4070f4;
     border-radius: 10%;
   }
 
