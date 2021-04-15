@@ -15,7 +15,7 @@
 
 /*===== Fuente y tipografia =====*/
 :root{
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Pacifico';
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
@@ -24,7 +24,7 @@
   :root{
     --big-font-size: 2.5rem;
     --h2-font-size: 2rem;
-    --normal-font-size: 1rem;
+    --normal-font-size: 1.1rem;
   }
 }
 
@@ -162,7 +162,9 @@ img{
   background-color: var(--first-color);
 }
 .nav__logo{
-  color: var(--first-color);
+  /* color: var(--first-color); */
+
+  font-family: 'Pacifico';font-size: 25px;
 }
 .nav__toggle{
   color: var(--second-color);
@@ -197,6 +199,7 @@ img{
 .home__title{
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
+  font-family: 'Pacifico';font-size: 25px;
 }
 .home__title-color{
   color: var(--first-color);
