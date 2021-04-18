@@ -199,7 +199,6 @@ img{
 .home__title{
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
-  font-family: 'Pacifico';font-size: 25px;
 }
 .home__title-color{
   color: var(--first-color);
